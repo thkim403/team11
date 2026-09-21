@@ -126,7 +126,7 @@
                         <span class="bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent">스스로 길을 찾는 SLAM</span>
                     </h2>
                     <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-                        <strong class="text-cyan-300 font-semibold">SLAM(Simultaneous Localization and Mapping)</strong>은 사전 지도 정보가 없는 무작위 환경에서 이동체가 <span class="underline decoration-cyan-500/50 underline-offset-4">자신의 위치를 추정(Localization)</span>함과 동시에 주변 환경의 <span class="underline decoration-cyan-500/50 underline-offset-4">3차원 지도를 생성(Mapping)</span>하는 자율지능 핵심 기술입니다.
+                        <strong class="text-cyan-300 font-semibold">SLAM(Simultaneous Localization and Mapping)</strong>은 사전 지도 정보가 없는 환경에서 이동체가 <span class="underline decoration-cyan-500/50 underline-offset-4">자신의 위치를 추정(Localization)</span>함과 동시에 주변 환경의 <span class="underline decoration-cyan-500/50 underline-offset-4">2D 또는 3D 지도를 생성(Mapping)</span>하는 자율지능 핵심 기술입니다.
                     </p>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -135,7 +135,7 @@
                             <div class="text-slate-100 font-bold text-lg flex items-center gap-2">
                                 <i class="fa-solid fa-location-crosshairs text-cyan-400"></i> 위치 추정
                             </div>
-                            <p class="text-xs text-slate-400">내장 센서(IMU, 바퀴 오도메트리) 및 주변 인식 데이터를 통해 "내가 지금 어디에 있는가?"를 실시간 확율론적 추정</p>
+                            <p class="text-xs text-slate-400">내장 센서(IMU, 바퀴 오도메트리) 및 주변 인식 데이터를 통해 "내가 지금 어디에 있는가?"를 실시간 확률론적으로 추정</p>
                         </div>
                         <div class="p-4 rounded-xl glass-card border-l-4 border-l-indigo-400 space-y-1">
                             <div class="text-xs text-slate-400 font-mono uppercase tracking-wider">Mapping</div>
@@ -168,7 +168,7 @@
                                     <i class="fa-solid fa-lightbulb text-amber-400"></i> SLAM의 해결책
                                 </p>
                                 <p class="text-xs text-slate-300 leading-relaxed">
-                                    센서 노이즈(오차)가 존재하는 상태에서 **베이즈 정리(Bayes Filter) 및 최적화 기법**을 통해 '위치'와 '지도'를 동시 확률적으로 갱신하며 수렴시킵니다.
+                                    센서 노이즈(오차)가 존재하는 상태에서 <strong>베이즈 필터(Bayes filter)와 최적화 기법</strong>을 통해 '위치'와 '지도'를 동시에 확률적으로 갱신하며 수렴시킵니다.
                                 </p>
                             </div>
                         </div>
@@ -396,7 +396,7 @@
                         </p>
                     </div>
                     <div class="pt-3 border-t border-slate-800/80 text-[11px] space-y-1 text-slate-400">
-                        <div class="flex justify-between"><span>장점:</span> <span class="text-slate-200">대규모/최신 3D SLAM 표준 (ORB-SLAM)</span></div>
+                        <div class="flex justify-between"><span>장점:</span> <span class="text-slate-200">대규모 SLAM에 활용되는 그래프 최적화 구조</span></div>
                         <div class="flex justify-between"><span>한계:</span> <span class="text-slate-200">Loop Closure 검출 시 높은 연산 필요</span></div>
                     </div>
                 </div>
@@ -424,12 +424,12 @@
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 font-semibold text-slate-200">거리 측정 정밀도</td>
-                                <td class="px-4 py-3 text-emerald-400 font-semibold">매우 높음 (수 mm ~ cm 단위)</td>
+                                <td class="px-4 py-3 text-emerald-400 font-semibold">일반적으로 높음 (센서에 따라 mm ~ cm 수준)</td>
                                 <td class="px-4 py-3 text-amber-400 font-semibold">중간 (깊이 추정 알고리즘 연산 필요)</td>
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 font-semibold text-slate-200">주간 / 야간 영향</td>
-                                <td class="px-4 py-3">조도 영향 없음 (어둠 속에서도 완벽 작동)</td>
+                                <td class="px-4 py-3">조도 영향이 비교적 적음 (비·안개·눈에는 영향 가능)</td>
                                 <td class="px-4 py-3">조도(역광, 야간) 및 역동적 환경에 취약</td>
                             </tr>
                             <tr>
@@ -476,7 +476,7 @@
                     </div>
                     <h3 class="text-base font-bold text-white">로봇청소기 & 물류 AMR</h3>
                     <p class="text-xs text-slate-300 leading-relaxed">
-                        실내 가정집 및 대형 물류창고에서 2D LiDAR 또는 ToF 범퍼 센서로 실시간 평면도를 그리고 최적의 청소/이동 경로 계산.
+                        실내 가정집 및 대형 물류창고에서 2D LiDAR 또는 ToF 거리 센서와 접촉식 범퍼 센서로 실시간 평면도를 그리고 최적의 청소·이동 경로를 계산.
                     </p>
                 </div>
 
